@@ -1,0 +1,27 @@
+.contact{
+  padding:80px 0;
+}
+
+form{
+  max-width:700px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input,
+textarea{
+  padding:15px;
+  border:1px solid #ddd;
+  border-radius:10px;
+}
+
+button{
+  padding:15px;
+  border:none;
+  background:#2E7D32;
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+}

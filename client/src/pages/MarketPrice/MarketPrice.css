@@ -1,0 +1,19 @@
+.market{
+  padding:80px 0;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+}
+
+th,td{
+  padding:15px;
+  border:1px solid #ddd;
+}
+
+th{
+  background:#2E7D32;
+  color:white;
+}
