@@ -1,29 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8faf8;
+  overflow-x:hidden;
+}
+
+.home{
+  width:100%;
+}
+
+section{
+  padding:100px 0;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-heading{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-heading h2{
+  font-size:3rem;
+  color:#17351f;
+  margin-bottom:15px;
+  font-weight:700;
+}
+
+.section-heading p{
+  color:#666;
+  font-size:1.1rem;
+}
+
+/* HERO */
+
 .hero{
-  min-height:90vh;
-  background:linear-gradient(135deg,#2E7D32,#4CAF50);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background-size:cover;
+  background-position:center;
+  color:white;
+  position:relative;
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:12px 24px;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:50px;
+  margin-bottom:30px;
+  font-size:.95rem;
+}
+
+.hero h1{
+  font-size:5rem;
+  line-height:1.1;
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:#ffd54f;
+}
+
+.hero p{
+  font-size:1.3rem;
+  line-height:1.8;
+  opacity:.9;
+  margin-bottom:40px;
+}
+
+.hero-buttons{
   display:flex;
   justify-content:center;
+  gap:20px;
+}
+
+.primary-btn{
+  background:#2e7d32;
+  color:white;
+  border:none;
+  padding:16px 38px;
+  border-radius:50px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;
   align-items:center;
+  gap:10px;
+  transition:.4s;
+}
+
+.primary-btn:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(46,125,50,.35);
+}
+
+.secondary-btn{
+  background:transparent;
+  border:2px solid white;
+  color:white;
+  padding:16px 38px;
+  border-radius:50px;
+  font-size:1rem;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.secondary-btn:hover{
+  background:white;
+  color:#17351f;
+}
+
+/* STATS */
+
+.stats{
+  margin-top:-70px;
+  position:relative;
+  z-index:10;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.stat-card{
+  background:white;
+  border-radius:25px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.stat-card h3{
+  color:#2e7d32;
+  font-size:2.7rem;
+  font-weight:700;
+}
+
+.stat-card p{
+  color:#666;
+  margin-top:10px;
+}
+
+/* FEATURES */
+
+.features{
+  background:#f8faf8;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.feature-card{
+  background:white;
+  padding:40px 30px;
+  text-align:center;
+  border-radius:25px;
+  transition:.4s;
+  box-shadow:0 10px 35px rgba(0,0,0,.05);
+}
+
+.feature-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+.feature-icon{
+  font-size:3rem;
+  color:#2e7d32;
+  margin-bottom:20px;
+}
+
+.feature-card h3{
+  margin-bottom:12px;
+  color:#17351f;
+}
+
+.feature-card p{
+  color:#666;
+  line-height:1.7;
+}
+
+/* CROPS */
+
+.crop-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.crop-card{
+  height:300px;
+  border-radius:25px;
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+  position:relative;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.crop-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+      to top,
+      rgba(0,0,0,.7),
+      transparent
+  );
+}
+
+.crop-card:hover{
+  transform:scale(1.04);
+}
+
+.crop-card span{
+  position:absolute;
+  bottom:25px;
+  left:25px;
+  color:white;
+  font-size:1.6rem;
+  font-weight:700;
+  z-index:2;
+}
+
+/* TIPS */
+
+.tips{
+  background:#f4f9f3;
+}
+
+.tips-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.tip-card{
+  background:white;
+  padding:40px 30px;
+  text-align:center;
+  border-radius:25px;
+  box-shadow:0 10px 35px rgba(0,0,0,.05);
+  transition:.4s;
+}
+
+.tip-card:hover{
+  transform:translateY(-8px);
+}
+
+.tip-card svg{
+  font-size:3rem;
+  color:#2e7d32;
+  margin-bottom:20px;
+}
+
+.tip-card h4{
+  margin-bottom:15px;
+  color:#17351f;
+}
+
+.tip-card p{
+  color:#666;
+  line-height:1.7;
+}
+
+/* AI SECTION */
+
+.ai-section{
+  background-size:cover;
+  background-position:center;
   text-align:center;
   color:white;
 }
 
-.hero-content h1{
-  font-size:4rem;
+.ai-icon{
+  font-size:5rem;
+  color:#ffd54f;
   margin-bottom:20px;
 }
 
-.hero-content p{
+.ai-section h2{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.ai-section p{
   max-width:700px;
   margin:auto;
   font-size:1.2rem;
+  line-height:1.8;
+  margin-bottom:35px;
 }
 
-.hero button{
-  margin-top:25px;
-  padding:14px 35px;
-  border:none;
-  border-radius:50px;
-  background:#FFC107;
-  font-weight:600;
+/* CONTACT */
+
+.contact{
+  background:white;
+  text-align:center;
+}
+
+.contact-icon{
+  font-size:4rem;
+  color:#2e7d32;
+  margin-bottom:20px;
+}
+
+.contact h2{
+  font-size:2.8rem;
+  color:#17351f;
+  margin-bottom:15px;
+}
+
+.contact p{
+  max-width:700px;
+  margin:auto;
+  color:#666;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+  .hero h1{
+      font-size:4rem;
+  }
+
+}
+
+@media(max-width:768px){
+
+  section{
+      padding:80px 0;
+  }
+
+  .hero{
+      min-height:90vh;
+  }
+
+  .hero h1{
+      font-size:2.8rem;
+  }
+
+  .hero p{
+      font-size:1rem;
+  }
+
+  .hero-buttons{
+      flex-direction:column;
+      align-items:center;
+  }
+
+  .section-heading h2{
+      font-size:2.2rem;
+  }
+
+  .ai-section h2,
+  .contact h2{
+      font-size:2.2rem;
+  }
+
+  .stats{
+      margin-top:0;
+      padding-top:40px;
+  }
+}
+
+@media(max-width:480px){
+
+  .hero h1{
+      font-size:2.3rem;
+  }
+
+  .section-heading h2{
+      font-size:1.8rem;
+  }
+
+  .primary-btn,
+  .secondary-btn{
+      width:100%;
+      justify-content:center;
+  }
+
 }
